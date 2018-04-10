@@ -1,4 +1,3 @@
-import { Collection } from 'mongodb';
 import { createHash } from 'crypto';
 import * as debug from 'debug';
 
@@ -18,6 +17,14 @@ export namespace DynamicIndexes {
       ops: number;
       since: Date;
     };
+  }
+
+  export interface Collection {
+    collectionName: string;
+    indexes: () => Promise<DBIndex[]>;
+    createIndex: (schema: any, options?: any) => Promise<any>;
+    aggregate: (aggregation: any) => any;
+    dropIndex: (name: string) => Promise<any>;
   }
 
   const d = debug('app:dynamic-index');

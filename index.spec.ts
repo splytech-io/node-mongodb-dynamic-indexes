@@ -1,7 +1,7 @@
 import { expect } from 'chai';
-import { Collection } from 'mongodb';
 import { DynamicIndexes } from './index';
 import sinon = require('sinon');
+import Collection = DynamicIndexes.Collection;
 
 describe('DynamicIndexes', () => {
   const sandbox = sinon.sandbox.create();
@@ -19,7 +19,8 @@ describe('DynamicIndexes', () => {
       background: false,
     }];
 
-    return <any>{
+    return {
+      collectionName: 'test',
       indexes: async () => indexes,
       dropIndex: async (name: string) => {
         const index = indexes.find((item) => item.name === name);

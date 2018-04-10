@@ -1,6 +1,6 @@
 {
   "name": "@splytech-io/mongodb-dynamic-indexes",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "MongoDB Dynamic Indexes",
   "main": "index",
   "typings": "index.d",
@@ -21,7 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/debug": "0.0.30",
-    "@types/mongodb": "^3.0.12",
+    "@types/node": "^9.6.2",
     "debug": "^3.1.0"
   },
   "nodemonConfig": {
