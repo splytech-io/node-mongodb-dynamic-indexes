@@ -10,7 +10,7 @@
     "lint:fix": "tslint --project . --fix",
     "build": "tsc",
     "prepush": "npm run lint",
-    "prepublish": "npm run lint && npm run test && npm run build"
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "keywords": [
     "mongodb",
